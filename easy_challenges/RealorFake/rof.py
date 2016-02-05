@@ -1,3 +1,5 @@
+# This is for the challenge REAL FAKE @ https://www.codeeval.com/open_challenges/227/
+
 import sys
 
 
@@ -22,7 +24,7 @@ def rof_test():
                     result.append(int(line[count_len]))
                     count_num += 1
                 count_len += 1
-                
+
             if sum(result) % 10 == 0:
                 print("Real")
             else:
