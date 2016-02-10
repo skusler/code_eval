@@ -9,10 +9,11 @@ def bc():
             game_split = line.split(' | ')
             names = game_split[0].split()
             max_turns = int(game_split[1])
-            count = 0
-            print(names)
-            print(max_turns)
-            print(count)
+            while len(names) > 1:
+                bye_bye = max_turns % len(names)
+                names.remove(names[bye_bye])
+            else:
+                print(names)
 
 
 bc()
