@@ -10,6 +10,7 @@ def bc():
             names = game_split[0].split()
             max_turns = int(game_split[1])
             while len(names) > 1:
+                # Used to cycle through all names successfully.  Minus 1 added because of arrays starting at 0.
                 bye_bye = (max_turns - 1) % len(names)
                 names.remove(names[bye_bye])
             else:
