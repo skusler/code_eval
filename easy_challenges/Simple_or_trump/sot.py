@@ -14,6 +14,10 @@ def sot():
             trump = card_list_split[1]
             # Splits both cards into 2 entries in an array
             each_card = cards.split()
+            # For debugging
+            # print(cards)
+            # print(trump)
+            # print(each_card)
             if trump[0] in each_card[0] and trump in each_card[1]:
                 print("Double_neither in")
                 double_neither(each_card)
