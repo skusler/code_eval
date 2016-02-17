@@ -18,7 +18,7 @@ def sot():
             # print(cards)
             # print(trump)
             # print(each_card)
-            if trump[0] in each_card[0] and trump in each_card[1]:
+            if trump in each_card[0] and trump in each_card[1]:
                 print("Double_neither in")
                 double_neither(each_card)
             elif trump in each_card[0]:
