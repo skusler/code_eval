@@ -8,11 +8,11 @@ face_cards = {'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 def sot():
     with open(sys.argv[1], 'r') as card_list:
         for line in card_list:
-            # Splits first half and second half via pipe.
+            # Splits input via pipe to have 2 cards in one list and the trump card in another.
             card_list_split = line.split(' | ')
             cards = card_list_split[0]
             trump = card_list_split[1]
-            # Splits both cards into 2 entries in an array
+            # Splits both cards into 2 entries in an list.
             each_card = cards.split()
             # For debugging
             # print(cards)
@@ -21,12 +21,15 @@ def sot():
             if trump in each_card[0] and trump in each_card[1]:
                 print("Double_neither in")
                 double_neither(each_card)
+                
             elif trump in each_card[0]:
                 print("Running first elif")
                 print(each_card[0])
+                
             elif trump in each_card[1]:
                 print("Running second elif")
                 print(each_card[1])
+                
             else:
                 print("Double_neither not in")
                 double_neither(each_card)
@@ -40,12 +43,16 @@ def double_neither(each_card):
     # If first letter of string is in face_cards it assigns the variable the corresponding number.
     if x in face_cards:
         x = face_cards[x]
+        
     if y in face_cards:
         y = face_cards[y]
+        
     if int(x) == int(y):
         print(each_card[0], each_card[1])
+        
     elif int(x) > int(y):
         print(each_card[0])
+        
     else:
         print(each_card[1])
 
