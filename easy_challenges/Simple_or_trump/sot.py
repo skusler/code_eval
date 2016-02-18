@@ -8,7 +8,7 @@ face_cards = {'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 def sot():
     with open(sys.argv[1], 'r') as card_list:
         for line in card_list:
-            # Splits input via pipe to have 2 cards in one list and the trump card in another.
+            # Splits input via pipe to have 2 entries in a list.  First is the two cards, second is the trump card.
             card_list_split = line.split(' | ')
             cards = card_list_split[0]
             trump = card_list_split[1]
