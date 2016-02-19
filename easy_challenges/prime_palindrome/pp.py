@@ -4,20 +4,21 @@
 import sys
 
 
-def pp():
+def pp(arg):
     # Reversed range to find biggest first
-    for x in reversed(range(2, 1000)):
+    for x in reversed(range(2, arg)):
         # Checks for palindrome first as that's easier than finding if prime.
         if str(x) == str(x)[::-1]:
             # Second for loop to check for prime
-            for i in range(2, x):
+            # The top range is the square root of arg rounded down.
+            for i in range(2, int(x ** 0.5)):
                 if x % i == 0:
                     break
             else:
                 return str(x)
 
 
-prime_palindrome = pp()
+prime_palindrome = pp(100000000000)
 
 
 sys.stdout.write(prime_palindrome)
